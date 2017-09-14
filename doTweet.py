@@ -11,7 +11,6 @@ TWEET_RESERVOIR_FILE="tweetReservoir.txt"
 #   generated in ./datasources/ (from the internet)
 def initialiseLyricReservoir():
   logging.info("initialiseLyricReservoir()")
-  #tweetReserviourFileHandle=open(TWEET_RESERVOIR_FILE, 'w')
   with open(LYRIC_SOURCE_FILE) as lyricFile:
     lyricList = lyricFile.read().splitlines()
     logging.info("Got " + str(len(lyricList)) + " lines from the source file.")
@@ -21,9 +20,7 @@ def initialiseLyricReservoir():
     logging.info("Got " + str(len(lyricSet)) + " lyric lines after removing duplicates.")
 
     writeReservoirFile(lyricList)
-    #writeIterableToReservoir(lyricSet, tweetReserviourFileHandle)
 
-  tweetReserviourFileHandle.close()
   logging.info("Tweet reserviour file saved. ")
 
 # Tweets are removed from the reservoir
