@@ -1,14 +1,18 @@
-== Overview ==
-Repository includes lyric data, so it shouldn't be necassary to generate the data.
-I include the scripts to document the source of the bot input.
+= Overview
+Pregenerated lyricList.txt included. This set of scripts regenerates lyricList.txt if ran in the correct order.
+It shouldn't really be necesary, but they are handy if the input data turns out to be faulty or to provide a
+starting point should a better source appear.
 
-== Requirements ==
+= Requirements
 Python 3
+
 Beautiful Soup
+
 Curl
+
 Bash
 
-== Data generation script order ==
+= Data generation script order
 $ chmod +x fetchRawSongListHtml.sh
 $ ./fetchRawSongListHtml.sh           # Fetch remote song list (raw HTML).
 $ python parseSongUrlList.py          # Extract the URL for each songs' lyric page and generate the URL list
