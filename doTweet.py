@@ -2,10 +2,12 @@ import tweepy
 import random, os, json
 
 import logging
-logging.basicConfig(filename='originalTweetsMaterialBot.log',format='%(asctime)s %(message)s',level=logging.INFO)
+SCRIPT_PARENT = os.path.dirname(os.path.abspath(__file__))
+logging.basicConfig(filename=SCRIPT_PARENT + '/originalTweetsMaterialBot.log',format='%(asctime)s %(message)s',level=logging.INFO)
 
-LYRIC_SOURCE_FILE="datasources/songLyrics.txt"
-TWEET_RESERVOIR_FILE="tweetReservoir.txt"
+LYRIC_SOURCE_FILE= SCRIPT_PARENT + "/datasources/songLyrics.txt"
+TWEET_RESERVOIR_FILE = SCRIPT_PARENT + "/tweetReservoir.txt"
+SECRETS_FILE= SCRIPT_PARENT + "/secrets.json"
 
 # Generate the tweet 'resoviour' from songLyrics.txt
 #   generated in ./datasources/ (from the internet)
@@ -71,7 +73,6 @@ if isTweetReservoirDepleted():
   logging.info("Depleted reserviour detected. Resetting")
   initialiseLyricReservoir()
 
-SECRETS_FILE="secrets.json"
 
 # Load authentication keys
 with open(SECRETS_FILE) as secretsFileHandle:

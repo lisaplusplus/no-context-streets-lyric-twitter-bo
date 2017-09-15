@@ -20,4 +20,6 @@ secrets.json file with Twitter API auth data
 # Running
 $ python doTweet.py
 
+# Crontab (freeBSD, but should work anywhere)
+0,30    *       *       *       *       /usr/local/bin/python3.6 /usr/home/freebsd/no-context-streets-lyric-twitter-bo/doTweet.py
 
