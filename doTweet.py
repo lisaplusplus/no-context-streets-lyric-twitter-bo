@@ -14,7 +14,7 @@ SECRETS_FILE= SCRIPT_PARENT + "/secrets.json"
 BOT_NAME="NoCtxStreetsTweetBot"
 BOT_URL="http://spacekitcat.com"
 BOT_LOC="The Streets"
-BOT_VRS="v0.1"
+BOT_VRS="v0.2"
 BOT_ABT="No context lyrics from The Streets. " + BOT_VRS
 
 # Generate the tweet 'resoviour' from songLyrics.txt
