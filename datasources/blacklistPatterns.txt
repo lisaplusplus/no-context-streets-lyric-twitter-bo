@@ -1,0 +1,6 @@
+^\[[Cc]{1}horus\]$
+^\[Chorus x2\]$
+^This aint even funny\.$
+^.{140}.+$
+^[Aa]{1}nd.*$
+^\(Talking\)$
